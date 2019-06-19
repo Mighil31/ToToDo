@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-To DO</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<body>
+	<ul >
+		<li><a href="/">To-To DO</a></li>
+		<% if(!currentUser){ %>
+			<li style="float:right"><a class="active" href="/login">Log In</a></li>
+			<li style="float:right"><a class="active" href="/register">Sign Up</a></li>
+		<% } else  { %>
+			<li style="float:right"><a class="active" href="/logout">Log Out</a></li>
+		<% } %>
+	</ul>

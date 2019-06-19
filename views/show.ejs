@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+
+<div id="centernew">
+
+	<h2><%= todo.title %></h2>
+    <div class="content">
+        <span><%= todo.created.toDateString() %></span>
+    </div>
+    <div class="description">
+        <p><%= todo.body %></p>
+    </div>
+    <form id="delete" action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+        <button class="btn btnred">Delete</button>
+    </form>
+    <a class="btn btnyellow" href="/todos/<%= todo._id %>/edit">Edit</a>
+</div>
+
+
+</body>
+</html>

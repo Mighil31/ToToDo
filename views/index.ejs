@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+
+<div id="centertodo">
+	<h1>Todos</h1>
+	<div class="newtodo">
+		<a href="/todos/new" class="btn">New To-Do</a>
+	</div>
+	<% todos.forEach(function(todo){ %>
+		<div class="todo">
+			<a href="/todos/<%= todo._id %>"><%= todo.title %></a> 
+			<span id="date"><%= todo.created.toDateString() %></span>
+			<p><%- todo.body.substring(0, 170)  %>...</p>
+		</div>
+	<%  }); %>    
+</div>
+
+</body>
+</html>
